@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <style>
+    #btn:hover
+    {
+       
+         width: 13%;
+         font-size: 120%
+    }
+    </style>
+</head>
+<body style = " background-color: bisque">
+    <div class="container-fluid" style = " margin-top: 5%">
+        <div class="row">
+            <div class="col-sm-3">
+    <img src="./images/bootstrap.jpeg" alt="" srcset="" id="img1" height="50%" width="60%">
+            </div>
+            <div class="col-sm-3">
+    <img src="./images/css.png" alt="" srcset="" id="img2" height="50%" width="60%">  
+     </div>
+     <div class="col-sm-3">
+    <img src="./images/wordpress-logo-stacked-rgb.png" alt="" srcset="" id="img3" height="50%" width="60%">
+</div>
+<div class="col-sm-3">
+    <img src="./images/ps.png" alt="" srcset="" id="img4" height="50%" width="60%">
+</div>
+</div>
+</div> <br>
+
+<input type="button" value="Click to see Magic" onclick="swap()" style = "margin-left: 45%; background-color: black ; color: white; " id="btn">
+
+    <script>
+    
+    function swap()
+    {
+        var img1 = document.getElementById("img1").src;      
+        var img2 =document.getElementById("img2").src;
+        var img3 = document.getElementById("img3").src;
+        var img4 = document.getElementById("img4").src; 
+        document.getElementById("img1").src = img3;
+        document.getElementById("img2").src = img4;
+        document.getElementById("img3").src = img2;
+        document.getElementById("img4").src = img1;
+
+
+    }
+    
+    </script>
+    
+</body>
+</html>

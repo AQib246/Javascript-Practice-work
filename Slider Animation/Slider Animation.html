@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slider</title>
+    <style>
+        body{
+
+            background-color: rgb(165, 163, 163)
+        }
+        h1
+        {
+           font-size: 7rem;
+            /* font-family:sans-serif; */
+            font-style: italic;
+            /* text-align: center; */
+            margin-top: 1%;
+            letter-spacing: 0.3rem;
+            /* color: white; */
+            margin-left: 25%;
+        }
+        .maindiv
+        {
+            width: 34%;
+            height: 70%;
+            position: absolute;
+            margin-left: 50%;
+            margin-top: 15%;
+            transform: translate(-50% , -50%);
+            background-image: url('./images/wordpress-logo-stacked-rgb.png');   
+            /* text-align: center; */
+            background-size: 100% 100%;
+           box-shadow: 8px 1px 20px 12px black;
+           animation: slider 5s infinite linear;
+           /* margin-bottom: 3%; */
+           border-top-right-radius: 10%
+           
+        }
+         
+       @keyframes slider{
+           5%{ background-image: url('./images/download.png'); }
+           30%{ background-image: url('./images/bootstrap.jpeg');}
+           30%{background-image: url('./images/wordpress-logo-stacked-rgb.png');}
+           30%{background-image: url('./images/css.png');}
+           15%{background-image: url('./images/ps.png');}
+           
+
+       }
+        
+            
+            
+    
+      
+    
+    </style>
+</head>
+<body>
+    <h1>Slider Animation</h1>
+    <div class="maindiv">
+        <!-- <img src="./images/emoji1.png" alt="" srcset=""> -->
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+<style>
+#ans
+{
+text-align: right;
+margin-top: 10px;
+height: 45px;
+width: 310px;
+border-radius: 5px;
+font-size: 35px;
+background-color: rgb(236, 230, 230);
+color: black;
+
+}
+#cal
+{
+ text-align: center;
+ margin-top: 200px
+}
+
+div
+{
+   /* background: black; */
+   width: 360px;
+   /* text-align: center; */
+   /* height: 260px;; */
+   margin-left: 600px;
+   border-style:solid;
+   border-color: black;
+   background-color: beige;
+   max-width: 350px;
+   height: 400px;
+   max-height: 390;
+   box-shadow: 10px 10px 8px #d8d4d4;
+}
+.num
+{
+    height: 45px;
+    width: 75px;
+    color: white;
+    background-color: rgb(36, 4, 4);
+    font-size: 20px;
+    border-radius: 200px;
+}
+.num:focus {
+    outline: none;
+}
+    
+#clear
+{
+     height: 45px;
+     width: 315px;
+     margin-bottom: 5px;
+     color: white;
+     background-color: rgb(36, 4, 4);
+     border-radius: 200px;
+     font-size: 20px;
+}
+
+body
+{
+background-color:bisque
+
+
+}
+#num:hover
+{
+    background-color: black;
+}
+#main
+{
+margin-left: -5px;
+border-bottom-color:  beige;
+text-align: left;
+height: 30px;
+padding-left: 6px;
+padding-top: 5px;
+width: 350px;
+}
+  
+.btn
+{
+   margin-top: 10px;
+    height: 35px;;
+border-radius: 30px; 
+text-transform: uppercase; 
+color: white; 
+background: #0099cc; 
+background: -webkit-linear-gradient(#e5f4f9, #b2e0ef, #7fcce5, #0089b7, #0099CC, #b2e0ef); 
+background: -o-linear-gradient(#e5f4f9, #b2e0ef, #7fcce5, #0089b7, #0099CC, #b2e0ef); 
+background: -moz-linear-gradient(#e5f4f9, #b2e0ef, #7fcce5, #0089b7, #0099CC, #b2e0ef);
+background: linear-gradient(#e5f4f9, #b2e0ef, #7fcce5, #0089b7, #0099CC, #b2e0ef); 
+}
+.btn:focus{
+    outline: none;
+}
+.num:hover
+{
+    font-size: 30px;
+    
+}
+#clear:hover
+{
+    font-size: 30px;
+}
+
+
+</style>
+</head>
+<body>
+
+    <input type="button" value=" Open Calculator" onclick="showcal()" class="btn" onmouseover="this.style.color = 'black'" onmouseout="this.style.color = 'white'"><br> <br>
+    <input type="button" value="Close Calculator" onclick="closecal()" class="btn" onmouseover="this.style.color = 'black'" onmouseout="this.style.color = 'white'">
+   
+    <div id="cal">
+   <form action="" name="form">
+     <input type="text" name="answer" placeholder="0" id="ans"> <br> <br>
+     <input type="button" value=" 7 " onclick="form.answer.value += '7' " class="num" >
+     <input type="button" value=" 8 " onclick="form.answer.value += '8' " class="num">
+     <input type="button" value=" 9 " onclick="form.answer.value += '9' " class="num">
+     <input type="button" value=" / " onclick="form.answer.value += '/' " class="num">
+     <br> <br>
+     
+     
+     <input type="button" value=" 4 " onclick="form.answer.value += '4' " class="num">
+     <input type="button" value=" 5 " onclick="form.answer.value += '5' " class="num">
+     <input type="button" value=" 6 " onclick="form.answer.value += '6' " class="num">
+     <input type="button" value=" * " onclick="form.answer.value += '*' " class="num">
+     <br><br>
+     
+     <input type="button" value=" 1 " onclick="form.answer.value += '1' " class="num">
+     <input type="button" value=" 2 " onclick="form.answer.value += '2' " class="num">
+     <input type="button" value=" 3 " onclick="form.answer.value += '3'" class="num">
+     <input type="button" value=" - " onclick="form.answer.value += '-' " class="num">
+     <br> <br>
+     
+     <input type="button" value=" . " onclick="form.answer.value += '.'" class="num">
+     <input type="button" value=" 0 " onclick="form.answer.value += '0' " class="num">
+     <input type="button" value=" * " onclick="form.answer.value += '*' " class="num">
+     <input type="button" value=" = " onclick="form.answer.value = eval(form.answer.value)" class="num">
+     
+     <br> <br>
+
+     <input type="button" value="Clear All"onclick = "form.answer.value = '' " id="clear" >
+    </form>
+</div>
+
+<script>
+     
+     function showcal()
+     {
+
+       var ss = document.getElementById("cal");
+       ss.style.display = "block";
+    }
+
+    function closecal()
+    {
+        var cc = document.getElementById("cal");
+        cc.style.display = "none";
+
+    }
+   function css()
+   {
+       var css = document.getElementsByClassName("btn")
+       css.style.color = "pink";
+   }
+
+</script>  
+</body>
+</html>

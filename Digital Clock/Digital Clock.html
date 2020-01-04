@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #clck{
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50% , -50%);
+         color: rgb(16, 248, 16);
+         font-family: digital;
+         background-color: black;
+         padding: 2%;
+         padding-top: 2%;
+         box-shadow: 5px 5px 20px 40px gray;
+         
+    }
+    @font-face
+    {
+        font-family: digital;
+        src:url(digital.ttf)
+    }
+
+    @media  only screen and (max-width: 1600px) and (min-width:1025px )
+    {
+        #clck{
+        font-size: 700%;
+        }
+    }
+
+    @media  only screen and (max-width: 1024px) and (min-width: 769px)
+    {
+        #clck{
+        font-size: 430%;
+        }
+    }
+  
+    @media  only screen and (max-width: 768px) and (min-width: 451px)
+    {
+        #clck{
+        font-size: 340%;
+        }
+    }
+
+    @media  only screen and (max-width: 450px) and (min-width: 321px)
+    {
+        #clck{
+        font-size: 190%;
+        box-shadow: 3px 3px 12px 11px gray;
+         
+        }
+    }
+
+    @media  only screen and (max-width: 320px) and (min-width: 1px)
+    {
+        #clck{
+        font-size: 160%;
+        box-shadow: 3px 3px 10px 10px gray;
+        }
+    }
+       
+    body
+    {
+        background-color: black;
+    } 
+    
+    </style>
+</head>
+<body>
+
+    <div id="clck"> 01:20:55 </div>
+    
+
+   <script> 
+
+        function clock()
+        {
+            var dte = new Date();
+            var hr = dte.getHours();
+            var min = dte.getMinutes();
+            var sec = dte.getSeconds();
+            var AP = "PM";
+
+            if(hr > 12)
+            {   
+                AP = "AM"
+                hr = hr - 12;
+            }
+             hr = (hr < 10) ? "0" + hr : hr;
+             min = (min < 10) ? "0" + min : min;
+             sec = (sec < 10) ? "0" + sec : sec;
+
+             var time = hr + ":" + min + ":" + sec + " " + AP;
+             document.getElementById("clck").innerHTML = time;
+             setInterval(clock , 1000);
+            }
+
+            clock();
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    </script>
+    
+</body>
+</html>
